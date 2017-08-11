@@ -5,11 +5,67 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title: 'Article-one |ankit',
+    heading: 'Article-one',
+    date: '11 August 2017',
+    content: `<p>
+                para 1well this appears to be the content of the article one 
+                if you are reading this then you will be reading the article one !!
+            </p>
+            <p>
+                para 2well this appears to be the content of the article one 
+                if you are reading this then you will be reading the article one !!
+            </p>
+            <p>
+                para 3well this appears to be the content of the article one 
+                if you are reading this then you will be reading the article one !!
+            </p>`
+            };
+function createtemplate(data)
+{
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+var htmltemplate =`
+<head>
+    <title>
+       ${title}
+    </title>
+    <meta name ="viewpart" content="width = device = width,initial-scale=1" />
+    <link href="/ui/style.css" rel="stylesheet" />
+</head>   
+
+    <body>
+        <div class = "container">
+        <div>
+            <a href="/">Home</a>
+        </div>
+        <hr/>
+        <h3>
+           ${heading}
+        </h3>
+        <div>
+            ${date}
+        </div>
+        <div>
+           ${content} 
+        </div>
+        </div>
+    </body>
+    
+    
+</html>
+`;
+return htmltemplate;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one',function (req,res){
-   res.sendFile(path.join(__dirname,'ui','article-one.html'));
+   res.send(createtemplate(articleOne));
 });
 app.get('/article-one/two',function (req,res){
    res.send('hey its article 1.2 being served by the server'); 
