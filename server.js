@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = { 
+    articleOne :{
     title: 'Article-one |ankit',
     heading: 'Article-one',
     date: '11 August 2017',
@@ -21,7 +22,43 @@ var articleOne = {
                 para 3well this appears to be the content of the article one 
                 if you are reading this then you will be reading the article one !!
             </p>`
-            };
+            },
+            articleTwo : {
+    title: 'Article-two |ankit',
+    heading: 'Article-two',
+    date: '11 August 2017',
+    content: `<p>
+                para 1well this appears to be the content of the article two 
+                if you are reading this then you will be reading the article two !!
+            </p>
+            <p>
+                para 2well this appears to be the content of the article two 
+                if you are reading this then you will be reading the article two !!
+            </p>
+            <p>
+                para 3well this appears to be the content of the article two 
+                if you are reading this then you will be reading the article two !!
+            </p>`
+            },
+            articlThree : {
+    title: 'Article-three |ankit',
+    heading: 'Article-three',
+    date: '11 August 2017',
+    content: `<p>
+                para 1well this appears to be the content of the article three 
+                if you are reading this then you will be reading the article three !!
+            </p>
+            <p>
+                para 2well this appears to be the content of the article three 
+                if you are reading this then you will be reading the article three !!
+            </p>
+            <p>
+                para 3well this appears to be the content of the article three 
+                if you are reading this then you will be reading the article on three !!
+            </p>`
+            }
+            
+};
 function createtemplate(data)
 {
     var title = data.title;
