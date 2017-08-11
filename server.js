@@ -11,6 +11,9 @@ app.get('/', function (req, res) {
 app.get('/article-one',function (req,res){
    res.send('hey its article 1 being served by the server'); 
 });
+app.get('/article-one/two',function (req,res){
+   res.send('hey its article 1.2 being served by the server'); 
+});
 app.get('/article-two',function (req,res){
    res.send('hey its article two being served by the server'); 
 });
