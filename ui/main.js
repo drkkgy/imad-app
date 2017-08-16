@@ -18,3 +18,15 @@ img.onclick = function()
    var Interval = setInterval(moveright,20);
    // img.style.marginLeft = '200px';
 };
+button.onclick = function()
+{
+//button counter program
+
+var button = document.getElementById('button');
+var counter = 0;
+
+//rendering the value
+counter = counter+1;
+var span = document.getElementById('span');
+span.innerHTML = counter.toString();
+}
