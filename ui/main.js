@@ -13,6 +13,7 @@ function moveright()
     marginleft = marginleft +2;
     img.style.marginLeft = marginleft +'px';
 }
+var counter = 0;
 img.onclick = function()
 {
    var Interval = setInterval(moveright,20);
@@ -23,7 +24,7 @@ button.onclick = function()
 //button counter program
 
 var button = document.getElementById('button');
-var counter = 0;
+
 
 //rendering the value
 counter = counter+1;
