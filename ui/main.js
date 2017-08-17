@@ -1,24 +1,4 @@
-console.log('Loaded!');
-// changer
 
-var element = document.getElementById('ankit');
-element.innerHTML = "new text ankit"
-
-// moving the element image
-
-var img = document.getElementById('madi');
-var marginleft = 0;
-function moveright()
-{
-    marginleft = marginleft +2;
-    img.style.marginLeft = marginleft +'px';
-}
-
-img.onclick = function()
-{
-   var Interval = setInterval(moveright,20);
-   // img.style.marginLeft = '200px';
-};
 // counter code
 var button = document.getElementById('counter');
 button.onclick = function()
@@ -41,7 +21,7 @@ request.onreadystatechange = function()
     // do nothing
 };
 //make a request on counter endpoint
-request.open('GET','http://drkkgy.imad.hasura-app.io/')
+request.open('GET','http://drkkgy.imad.hasura-app.io/counter')
 request.send(null);
 
 
