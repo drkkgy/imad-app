@@ -21,9 +21,24 @@ img.onclick = function()
 };
 button.onclick = function()
 {
-//button counter program
-
-var button = document.getElementById('button');
+//Create a Rrequest object
+var request = new XMLHttpRequest();
+// capturing the response and storing it in variables
+request.onreadystatechange = function()
+{
+    if(request.readystate === XMLHttpRequest.DONE)
+    {
+        // do this
+        if(request.status === 200)
+        {
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+    }
+    // do nothing
+};
+//make a request on counter endpoint
 
 
 //rendering the value
