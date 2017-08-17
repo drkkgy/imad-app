@@ -13,7 +13,7 @@ function moveright()
     marginleft = marginleft +2;
     img.style.marginLeft = marginleft +'px';
 }
-var counter = 0;
+
 img.onclick = function()
 {
    var Interval = setInterval(moveright,20);
@@ -42,7 +42,4 @@ request.onreadystatechange = function()
 
 
 //rendering the value
-counter = counter+1;
-var span = document.getElementById('span');
-span.innerHTML = counter.toString();
 }
