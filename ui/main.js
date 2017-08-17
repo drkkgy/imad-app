@@ -1,6 +1,6 @@
 
 // counter code
-var button = document.getElementById('button');
+var button = document.getElementById('counter');
 button.onclick = function()
 {
 //Create a Rrequest object
@@ -14,7 +14,7 @@ request.onreadystatechange = function()
         if(request.status === 200)
         {
             var counter = request.responseText;
-            var span = document.getElementById('button');
+            var span = document.getElementById('counter');
             span.innerHTML = counter.toString();
         }
     }
