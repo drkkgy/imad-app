@@ -21,7 +21,7 @@ request.onreadystatechange = function()
     // do nothing
 };
 //make a request on counter endpoint
-request.open('GET','http://drkkgy.imad.hasura-app.io/counter')
+request.open('GET','http://drkkgy.imad.hasura-app.io/counter',true);
 request.send(null);
 
 
