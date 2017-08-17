@@ -19,6 +19,8 @@ img.onclick = function()
    var Interval = setInterval(moveright,20);
    // img.style.marginLeft = '200px';
 };
+// counter code
+var button = document.getElementById('counter');
 button.onclick = function()
 {
 //Create a Rrequest object
@@ -39,6 +41,8 @@ request.onreadystatechange = function()
     // do nothing
 };
 //make a request on counter endpoint
+request.open('GET','http://drkkgy.imad.hasura-app.io/')
+request.send(null);
 
 
 //rendering the value
